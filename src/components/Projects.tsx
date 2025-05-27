@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -8,35 +7,35 @@ const Projects = () => {
       title: "Medi-Risk-Indicator",
       description: "AI-powered health risk prediction system using Support Vector Machine (SVM) algorithm to assess and predict potential health risks.",
       tech: ["Python", "SVM", "Machine Learning", "Healthcare AI"],
-      github: "#",
+      github: "https://github.com/TalapalliBhanusree",
       features: ["Predictive Analytics", "Health Risk Assessment", "AI-driven Insights"]
     },
     {
       title: "Skin Cancer Diagnosis",
       description: "Advanced skin lesion classification system combining CNN and Vision Transformer (ViT) architectures, achieving 90%+ accuracy.",
       tech: ["CNN", "Vision Transformer", "Deep Learning", "Medical AI"],
-      github: "#",
+      github: "https://github.com/TalapalliBhanusree",
       features: ["90%+ Accuracy", "CNN + ViT Architecture", "Medical Image Analysis"]
     },
     {
       title: "Real-Time Collaborative Code Editor",
       description: "Live code editing platform with multi-user support, enabling real-time collaboration for development teams.",
       tech: ["ReactJS", "WebSocket", "Real-time", "Collaboration"],
-      github: "#",
+      github: "https://github.com/TalapalliBhanusree",
       features: ["Live Collaboration", "Multi-user Support", "Real-time Sync"]
     },
     {
       title: "Hostel Management System",
       description: "Comprehensive full-stack web application for hostel room allocation, fee management, and student administration.",
       tech: ["Full-stack", "Web Development", "Database", "Management"],
-      github: "#",
+      github: "https://github.com/TalapalliBhanusree",
       features: ["Room Allocation", "Fee Management", "Student Portal"]
     },
     {
       title: "EMusic Web App",
       description: "Django-based music platform with Spotify integration, featuring personalized music dashboard and recommendations.",
       tech: ["Django", "Spotify API", "Web Development", "Python"],
-      github: "#",
+      github: "https://github.com/TalapalliBhanusree",
       features: ["Spotify Integration", "Personalized Dashboard", "Music Recommendations"]
     }
   ];
