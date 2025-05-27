@@ -51,19 +51,19 @@ const About = () => {
                 <div className="border-l-4 border-blue-400 pl-6">
                   <h4 className="text-xl font-semibold text-blue-400">B.Tech CSE (AI-ML)</h4>
                   <p className="text-gray-300">Vardhaman College of Engineering</p>
-                  <p className="text-gray-400">2022 – 2026 | CGPA: 8.9</p>
+                  <p className="text-gray-400">2022 – 2026</p>
                 </div>
                 
                 <div className="border-l-4 border-purple-400 pl-6">
                   <h4 className="text-lg font-semibold text-purple-400">Intermediate (MPC)</h4>
                   <p className="text-gray-300">Narayana Jr. College</p>
-                  <p className="text-gray-400">98.2%</p>
+                  <p className="text-gray-400">2020 – 2022</p>
                 </div>
                 
                 <div className="border-l-4 border-green-400 pl-6">
                   <h4 className="text-lg font-semibold text-green-400">SSC</h4>
                   <p className="text-gray-300">Brilliant Grammar High School</p>
-                  <p className="text-gray-400">CGPA: 10</p>
+                  <p className="text-gray-400">2020</p>
                 </div>
               </div>
             </div>
