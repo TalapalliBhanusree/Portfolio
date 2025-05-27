@@ -4,44 +4,64 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "C", level: 80 },
-        { name: "HTML/CSS", level: 90 }
+        { name: "Python", level: "Expert" },
+        { name: "JavaScript", level: "Advanced" },
+        { name: "C", level: "Intermediate" },
+        { name: "HTML/CSS", level: "Expert" }
       ],
       color: "blue"
     },
     {
       title: "Frameworks & Libraries",
       skills: [
-        { name: "Django", level: 85 },
-        { name: "Flask", level: 80 },
-        { name: "ReactJS", level: 85 },
-        { name: "TensorFlow", level: 80 },
-        { name: "Keras", level: 75 },
-        { name: "Scikit-learn", level: 85 }
+        { name: "Django", level: "Advanced" },
+        { name: "Flask", level: "Intermediate" },
+        { name: "ReactJS", level: "Advanced" },
+        { name: "TensorFlow", level: "Intermediate" },
+        { name: "Keras", level: "Intermediate" },
+        { name: "Scikit-learn", level: "Advanced" }
       ],
       color: "purple"
     },
     {
       title: "Tools & Technologies",
       skills: [
-        { name: "Git", level: 85 },
-        { name: "GitHub", level: 90 },
-        { name: "VS Code", level: 95 },
-        { name: "DevOps", level: 70 }
+        { name: "Git", level: "Advanced" },
+        { name: "GitHub", level: "Expert" },
+        { name: "VS Code", level: "Expert" },
+        { name: "DevOps", level: "Beginner" }
       ],
       color: "green"
     },
     {
       title: "Databases & Cloud",
       skills: [
-        { name: "MySQL", level: 80 },
-        { name: "AWS", level: 75 }
+        { name: "MySQL", level: "Intermediate" },
+        { name: "AWS", level: "Intermediate" }
       ],
       color: "orange"
     }
   ];
+
+  const getLevelColor = (level: string) => {
+    const colors = {
+      Expert: "bg-emerald-500 text-emerald-100 border-emerald-400",
+      Advanced: "bg-blue-500 text-blue-100 border-blue-400",
+      Intermediate: "bg-amber-500 text-amber-100 border-amber-400",
+      Beginner: "bg-gray-500 text-gray-100 border-gray-400"
+    };
+    return colors[level as keyof typeof colors] || colors.Beginner;
+  };
+
+  const getLevelDots = (level: string) => {
+    const dots = {
+      Expert: 5,
+      Advanced: 4,
+      Intermediate: 3,
+      Beginner: 2
+    };
+    return dots[level as keyof typeof dots] || 2;
+  };
 
   const getColorClasses = (color: string) => {
     const colors = {
@@ -66,19 +86,27 @@ const Skills = () => {
             <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50">
               <h3 className="text-2xl font-bold text-white mb-6">{category.title}</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
+                  <div key={skillIndex} className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300 font-medium">{skill.name}</span>
-                      <span className="text-gray-400 text-sm">{skill.level}%</span>
+                      <span className="text-gray-300 font-medium text-lg">{skill.name}</span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${getLevelColor(skill.level)}`}>
+                        {skill.level}
+                      </span>
                     </div>
                     
-                    <div className="w-full bg-slate-700 rounded-full h-2.5 overflow-hidden">
-                      <div 
-                        className={`h-full bg-gradient-to-r ${getColorClasses(category.color)} rounded-full skill-bar transition-all duration-1000 ease-out`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
+                    <div className="flex items-center space-x-1">
+                      {Array.from({ length: 5 }, (_, i) => (
+                        <div
+                          key={i}
+                          className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                            i < getLevelDots(skill.level)
+                              ? `bg-gradient-to-r ${getColorClasses(category.color)} shadow-lg`
+                              : 'bg-slate-700'
+                          }`}
+                        />
+                      ))}
                     </div>
                   </div>
                 ))}
