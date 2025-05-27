@@ -1,4 +1,4 @@
-Portfolio Project
+#Portfolio Project
 A modern, responsive web application built with React, TypeScript, Vite, and Tailwind CSS, powered by shadcn-ui components.
 
 Project Overview
