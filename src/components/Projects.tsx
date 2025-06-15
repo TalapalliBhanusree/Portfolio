@@ -25,8 +25,8 @@ const Projects = () => {
       features: ["Live Collaboration", "Multi-user Support", "Real-time Sync"]
     },
     {
-      title: "Hostel Management System",
-      description: "Comprehensive full-stack web application for hostel room allocation, fee management, and student administration.",
+      title: "Hostel Management System (Full Stack Project)",
+      description: "A comprehensive full-stack web application for hostel room allocation, fee management, and student administration. This Full Stack Project leverages modern web and database technologies for end-to-end management.",
       tech: ["Full-stack", "Web Development", "Database", "Management"],
       github: "https://github.com/TalapalliBhanusree",
       features: ["Room Allocation", "Fee Management", "Student Portal"]
